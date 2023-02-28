@@ -1,0 +1,29 @@
+while True:
+    input_string = input("Masukkan operasi matematika: ")
+
+    if input_string == "q":
+        break
+
+    try:
+       
+        operand1, operator, operand2 = input_string.split()
+
+        operand1 = int(operand1)
+        operand2 = int(operand2)
+
+        if operator == "+":
+            result = operand1 + operand2
+        elif operator == "-":
+            result = operand1 - operand2
+        elif operator == "*":
+            result = operand1 * operand2
+        elif operator == "/":
+            result = operand1 / operand2
+        else:
+            print("Operator tidak valid")
+            continue
+
+        print("Hasil: ", result)
+
+    except ValueError:
+        print("Operand tidak valid")
